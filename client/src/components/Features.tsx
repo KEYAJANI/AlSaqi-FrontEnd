@@ -61,7 +61,7 @@ export default function Features() {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{translations[language].featuresTitle}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" id="features-title">{translations[language].featuresTitle}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {translations[language].featuresSubtitle}
           </p>
@@ -80,7 +80,7 @@ export default function Features() {
               <div className="bg-primary/10 text-primary p-3 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3" id={`feature-${index + 1}`}>{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
